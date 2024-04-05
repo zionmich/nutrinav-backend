@@ -1,0 +1,13 @@
+{
+  "dependencies": {
+    "@supabase/supabase-js": "^2.39.8",
+    "@vercel/node": "^3.0.26",
+    "axios": "^1.6.7",
+    "cheerio": "^1.0.0-rc.12",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "index.js": "^0.0.3",
+    "touch": "^3.1.0",
+    "vercel": "^33.6.3"
+  }
+}
