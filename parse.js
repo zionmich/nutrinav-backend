@@ -1,4 +1,4 @@
-const axios = require('./my-express-api/node_modules/axios');
+const axios = require('axios');
 const https = require('https');
 const cheerio = require('cheerio');
 const fs = require('fs');

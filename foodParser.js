@@ -1,4 +1,6 @@
-const supabaseClient = require('./my-express-api/supabaseClient');
+const axios = require('axios');
+const https = require('https');
+const supabaseClient = require('./supabaseClient');
 const fs = require('fs');
 const path = require('path');
 const cheerio = require('cheerio');
