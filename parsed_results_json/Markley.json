@@ -1,8 +1,9 @@
 [
   [
+    "Hot Cereal",
     "Oatmeal",
     [
-      "brunch"
+      "breakfast"
     ],
     [
       "oats"
@@ -30,40 +31,135 @@
     }
   ],
   [
-    "Butterscotch Chip Pancakes",
+    "Toast",
+    "Fresh Steamed Broccoli Florets",
     [
-      "brunch"
+      "breakfast"
     ],
+    [],
     [
-      "milk",
-      "oats",
-      "soy",
-      "wheat/barley/rye"
-    ],
-    [
-      "Vegetarian"
+      "Gluten Free",
+      "Nutrient Dense High",
+      "Vegan",
+      "Carbon Footprint Low"
     ],
     {
-      "serving_size": "45",
-      "calories": "85",
-      "total_fat": "1",
-      "saturated_fat": "1",
+      "serving_size": "113",
+      "calories": "39",
+      "total_fat": "0",
+      "saturated_fat": "0",
       "cholesterol": "0",
-      "sodium": "283",
-      "total_carbohydrate": "16",
-      "dietary_fiber": "0",
-      "sugars": "5",
-      "protein": "2",
-      "vitamin_a": "0",
-      "vitamin_c": "0",
-      "calcium": "2",
-      "iron": "4"
+      "sodium": "37",
+      "total_carbohydrate": "8",
+      "dietary_fiber": "3",
+      "sugars": "2",
+      "protein": "3",
+      "vitamin_a": "14",
+      "vitamin_c": "169",
+      "calcium": "5",
+      "iron": "5"
     }
   ],
   [
+    "Toast",
+    "Biscuits",
+    [
+      "breakfast"
+    ],
+    [
+      "milk",
+      "wheat/barley/rye"
+    ],
+    [
+      "Nutrient Dense Low",
+      "Vegetarian",
+      "Carbon Footprint Low"
+    ],
+    {
+      "serving_size": "62",
+      "calories": "185",
+      "total_fat": "8",
+      "saturated_fat": "5",
+      "cholesterol": "0",
+      "sodium": "576",
+      "total_carbohydrate": "25",
+      "dietary_fiber": "1",
+      "sugars": "2",
+      "protein": "3",
+      "vitamin_a": "",
+      "vitamin_c": "",
+      "calcium": "3",
+      "iron": "9"
+    }
+  ],
+  [
+    "Toast",
+    "Sausage Gravy",
+    [
+      "breakfast"
+    ],
+    [
+      "milk",
+      "pork",
+      "wheat/barley/rye"
+    ],
+    [
+      "Nutrient Dense Medium High",
+      "Carbon Footprint Medium"
+    ],
+    {
+      "serving_size": "57",
+      "calories": "73",
+      "total_fat": "4",
+      "saturated_fat": "2",
+      "cholesterol": "12",
+      "sodium": "178",
+      "total_carbohydrate": "5",
+      "dietary_fiber": "0",
+      "sugars": "3",
+      "protein": "4",
+      "vitamin_a": "2",
+      "vitamin_c": "0",
+      "calcium": "6",
+      "iron": "1"
+    }
+  ],
+  [
+    "Toast",
+    "Grilled Ham",
+    [
+      "breakfast"
+    ],
+    [
+      "pork"
+    ],
+    [
+      "Gluten Free",
+      "Nutrient Dense Low",
+      "Carbon Footprint Medium"
+    ],
+    {
+      "serving_size": "71",
+      "calories": "76",
+      "total_fat": "3",
+      "saturated_fat": "1",
+      "cholesterol": "32",
+      "sodium": "886",
+      "total_carbohydrate": "4",
+      "dietary_fiber": "0",
+      "sugars": "4",
+      "protein": "10",
+      "vitamin_a": "0",
+      "vitamin_c": "0",
+      "calcium": "0",
+      "iron": "3"
+    }
+  ],
+  [
+    "Toast",
     "Scrambled Eggs",
     [
-      "brunch"
+      "breakfast"
     ],
     [
       "eggs",
@@ -93,39 +189,10 @@
     }
   ],
   [
-    "Bacon",
-    [
-      "brunch"
-    ],
-    [
-      "pork"
-    ],
-    [
-      "Gluten Free",
-      "Nutrient Dense Low",
-      "Carbon Footprint Low"
-    ],
-    {
-      "serving_size": "41",
-      "calories": "204",
-      "total_fat": "18",
-      "saturated_fat": "6",
-      "cholesterol": "51",
-      "sodium": "638",
-      "total_carbohydrate": "0",
-      "dietary_fiber": "0",
-      "sugars": "0",
-      "protein": "13",
-      "vitamin_a": "0",
-      "vitamin_c": "0",
-      "calcium": "0",
-      "iron": "0"
-    }
-  ],
-  [
+    "Toast",
     "Scrambled Tofu",
     [
-      "brunch"
+      "breakfast"
     ],
     [
       "soy"
@@ -154,9 +221,10 @@
     }
   ],
   [
-    "Roasted Vegetable Medley",
+    "Toast",
+    "Lyonnaise Potatoes",
     [
-      "brunch"
+      "breakfast"
     ],
     [],
     [
@@ -167,25 +235,665 @@
     ],
     {
       "serving_size": "85",
-      "calories": "47",
-      "total_fat": "3",
+      "calories": "72",
+      "total_fat": "2",
       "saturated_fat": "0",
       "cholesterol": "0",
-      "sodium": "33",
-      "total_carbohydrate": "4",
+      "sodium": "55",
+      "total_carbohydrate": "12",
       "dietary_fiber": "1",
-      "sugars": "2",
+      "sugars": "0",
       "protein": "1",
-      "vitamin_a": "10",
-      "vitamin_c": "14",
-      "calcium": "2",
-      "iron": "2"
+      "vitamin_a": "0",
+      "vitamin_c": "9",
+      "calcium": "0",
+      "iron": "1"
     }
   ],
   [
-    "Deep Fried Tritaters",
+    "MBakery",
+    "Honey Glazed Donuts",
     [
-      "brunch"
+      "breakfast"
+    ],
+    [
+      "eggs",
+      "milk",
+      "soy",
+      "wheat/barley/rye"
+    ],
+    [
+      "Nutrient Dense Low",
+      "Vegetarian",
+      "Carbon Footprint Low"
+    ],
+    {
+      "serving_size": "82",
+      "calories": "301",
+      "total_fat": "15",
+      "saturated_fat": "7",
+      "cholesterol": "0",
+      "sodium": "269",
+      "total_carbohydrate": "41",
+      "dietary_fiber": "1",
+      "sugars": "20",
+      "protein": "4",
+      "vitamin_a": "0",
+      "vitamin_c": "0",
+      "calcium": "0",
+      "iron": "8"
+    }
+  ],
+  [
+    "MBakery",
+    "Cappuccino Chocolate Chip Muffins",
+    [
+      "breakfast"
+    ],
+    [
+      "eggs",
+      "milk",
+      "soy",
+      "wheat/barley/rye"
+    ],
+    [
+      "Nutrient Dense Low",
+      "Vegetarian",
+      "Carbon Footprint Low"
+    ],
+    {
+      "serving_size": "54",
+      "calories": "202",
+      "total_fat": "9",
+      "saturated_fat": "3",
+      "cholesterol": "18",
+      "sodium": "145",
+      "total_carbohydrate": "27",
+      "dietary_fiber": "1",
+      "sugars": "17",
+      "protein": "2",
+      "vitamin_a": "0",
+      "vitamin_c": "0",
+      "calcium": "0",
+      "iron": "0"
+    }
+  ],
+  [
+    "Soup",
+    "Shrimp & Corn Soup",
+    [
+      "lunch",
+      "dinner"
+    ],
+    [
+      "shellfish"
+    ],
+    [
+      "Halal",
+      "Nutrient Dense Low",
+      "Carbon Footprint Medium"
+    ],
+    {
+      "serving_size": "261",
+      "calories": "88",
+      "total_fat": "2",
+      "saturated_fat": "0",
+      "cholesterol": "22",
+      "sodium": "510",
+      "total_carbohydrate": "13",
+      "dietary_fiber": "2",
+      "sugars": "5",
+      "protein": "4",
+      "vitamin_a": "11",
+      "vitamin_c": "34",
+      "calcium": "2",
+      "iron": "3"
+    }
+  ],
+  [
+    "Signature Maize",
+    "Halal Pastrami Sandwich",
+    [
+      "lunch"
+    ],
+    [
+      "beef",
+      "milk",
+      "sesame seed",
+      "soy",
+      "wheat/barley/rye"
+    ],
+    [
+      "Halal",
+      "Nutrient Dense Low Medium",
+      "Carbon Footprint High"
+    ],
+    {
+      "serving_size": "147",
+      "calories": "376",
+      "total_fat": "21",
+      "saturated_fat": "12",
+      "cholesterol": "59",
+      "sodium": "844",
+      "total_carbohydrate": "29",
+      "dietary_fiber": "2",
+      "sugars": "4",
+      "protein": "23",
+      "vitamin_a": "1",
+      "vitamin_c": "1",
+      "calcium": "35",
+      "iron": "12"
+    }
+  ],
+  [
+    "Signature Maize",
+    "Onion Rings",
+    [
+      "lunch"
+    ],
+    [
+      "item is deep fried",
+      "milk",
+      "wheat/barley/rye"
+    ],
+    [
+      "Nutrient Dense Low",
+      "Vegetarian",
+      "Carbon Footprint Low"
+    ],
+    {
+      "serving_size": "85",
+      "calories": "358",
+      "total_fat": "25",
+      "saturated_fat": "5",
+      "cholesterol": "0",
+      "sodium": "626",
+      "total_carbohydrate": "29",
+      "dietary_fiber": "1",
+      "sugars": "4",
+      "protein": "3",
+      "vitamin_a": "0",
+      "vitamin_c": "0",
+      "calcium": "2",
+      "iron": "10"
+    }
+  ],
+  [
+    "24 Carrots",
+    "Southwest Corn Cakes",
+    [
+      "lunch"
+    ],
+    [],
+    [
+      "Nutrient Dense Medium",
+      "Vegan",
+      "Carbon Footprint Low"
+    ],
+    {
+      "serving_size": "85",
+      "calories": "79",
+      "total_fat": "3",
+      "saturated_fat": "0",
+      "cholesterol": "0",
+      "sodium": "25",
+      "total_carbohydrate": "12",
+      "dietary_fiber": "1",
+      "sugars": "1",
+      "protein": "1",
+      "vitamin_a": "3",
+      "vitamin_c": "5",
+      "calcium": "1",
+      "iron": "3"
+    }
+  ],
+  [
+    "24 Carrots",
+    "Frijoles de la Olla",
+    [
+      "lunch"
+    ],
+    [],
+    [
+      "Gluten Free",
+      "Nutrient Dense High",
+      "Vegan",
+      "Carbon Footprint Low"
+    ],
+    {
+      "serving_size": "118",
+      "calories": "256",
+      "total_fat": "2",
+      "saturated_fat": "0",
+      "cholesterol": "0",
+      "sodium": "8",
+      "total_carbohydrate": "44",
+      "dietary_fiber": "16",
+      "sugars": "2",
+      "protein": "15",
+      "vitamin_a": "0",
+      "vitamin_c": "2",
+      "calcium": "12",
+      "iron": "30"
+    }
+  ],
+  [
+    "24 Carrots",
+    "Mexican Rice",
+    [
+      "lunch"
+    ],
+    [],
+    [
+      "Gluten Free",
+      "Nutrient Dense Medium",
+      "Vegan",
+      "Carbon Footprint Low"
+    ],
+    {
+      "serving_size": "113",
+      "calories": "143",
+      "total_fat": "3",
+      "saturated_fat": "0",
+      "cholesterol": "0",
+      "sodium": "105",
+      "total_carbohydrate": "26",
+      "dietary_fiber": "1",
+      "sugars": "2",
+      "protein": "3",
+      "vitamin_a": "1",
+      "vitamin_c": "8",
+      "calcium": "0",
+      "iron": "5"
+    }
+  ],
+  [
+    "Halal",
+    "Halal Margarita Chicken",
+    [
+      "lunch"
+    ],
+    [],
+    [
+      "Gluten Free",
+      "Halal",
+      "Nutrient Dense Medium",
+      "Carbon Footprint Medium"
+    ],
+    {
+      "serving_size": "89",
+      "calories": "86",
+      "total_fat": "3",
+      "saturated_fat": "0",
+      "cholesterol": "30",
+      "sodium": "343",
+      "total_carbohydrate": "0",
+      "dietary_fiber": "0",
+      "sugars": "0",
+      "protein": "15",
+      "vitamin_a": "0",
+      "vitamin_c": "1",
+      "calcium": "0",
+      "iron": "1"
+    }
+  ],
+  [
+    "Halal",
+    "Sauteed Green Beans",
+    [
+      "lunch"
+    ],
+    [],
+    [
+      "Gluten Free",
+      "Nutrient Dense High",
+      "Vegan",
+      "Carbon Footprint Low"
+    ],
+    {
+      "serving_size": "170",
+      "calories": "74",
+      "total_fat": "3",
+      "saturated_fat": "0",
+      "cholesterol": "0",
+      "sodium": "61",
+      "total_carbohydrate": "10",
+      "dietary_fiber": "4",
+      "sugars": "4",
+      "protein": "3",
+      "vitamin_a": "21",
+      "vitamin_c": "27",
+      "calcium": "5",
+      "iron": "8"
+    }
+  ],
+  [
+    "Halal",
+    "Mexican Rice",
+    [
+      "lunch"
+    ],
+    [],
+    [
+      "Gluten Free",
+      "Nutrient Dense Medium",
+      "Vegan",
+      "Carbon Footprint Low"
+    ],
+    {
+      "serving_size": "113",
+      "calories": "143",
+      "total_fat": "3",
+      "saturated_fat": "0",
+      "cholesterol": "0",
+      "sodium": "105",
+      "total_carbohydrate": "26",
+      "dietary_fiber": "1",
+      "sugars": "2",
+      "protein": "3",
+      "vitamin_a": "1",
+      "vitamin_c": "8",
+      "calcium": "0",
+      "iron": "5"
+    }
+  ],
+  [
+    "MBakery",
+    "Vegan Raspberry Hazelnut Linzer Cookies",
+    [
+      "lunch",
+      "dinner"
+    ],
+    [
+      "soy",
+      "tree nuts",
+      "wheat/barley/rye"
+    ],
+    [
+      "Nutrient Dense Low Medium",
+      "Vegan",
+      "Carbon Footprint Low"
+    ],
+    {
+      "serving_size": "41",
+      "calories": "163",
+      "total_fat": "9",
+      "saturated_fat": "3",
+      "cholesterol": "0",
+      "sodium": "146",
+      "total_carbohydrate": "19",
+      "dietary_fiber": "2",
+      "sugars": "10",
+      "protein": "1",
+      "vitamin_a": "0",
+      "vitamin_c": "0",
+      "calcium": "4",
+      "iron": "3"
+    }
+  ],
+  [
+    "MBakery",
+    "Apricot Crumble Bars",
+    [
+      "lunch",
+      "dinner"
+    ],
+    [
+      "eggs",
+      "milk",
+      "wheat/barley/rye"
+    ],
+    [
+      "Nutrient Dense Low",
+      "Vegetarian",
+      "Carbon Footprint Low"
+    ],
+    {
+      "serving_size": "67",
+      "calories": "265",
+      "total_fat": "12",
+      "saturated_fat": "8",
+      "cholesterol": "49",
+      "sodium": "37",
+      "total_carbohydrate": "37",
+      "dietary_fiber": "1",
+      "sugars": "16",
+      "protein": "3",
+      "vitamin_a": "10",
+      "vitamin_c": "0",
+      "calcium": "1",
+      "iron": "5"
+    }
+  ],
+  [
+    "MBakery",
+    "Chocolate Chunk Cookies",
+    [
+      "lunch",
+      "dinner"
+    ],
+    [
+      "eggs",
+      "milk",
+      "soy",
+      "wheat/barley/rye"
+    ],
+    [
+      "Nutrient Dense Low",
+      "Vegetarian",
+      "Carbon Footprint Low"
+    ],
+    {
+      "serving_size": "35",
+      "calories": "152",
+      "total_fat": "7",
+      "saturated_fat": "3",
+      "cholesterol": "5",
+      "sodium": "117",
+      "total_carbohydrate": "21",
+      "dietary_fiber": "1",
+      "sugars": "13",
+      "protein": "2",
+      "vitamin_a": "4",
+      "vitamin_c": "0",
+      "calcium": "1",
+      "iron": "6"
+    }
+  ],
+  [
+    "Sauces",
+    "Honey Mustard",
+    [
+      "dinner"
+    ],
+    [],
+    [
+      "Gluten Free",
+      "Nutrient Dense High",
+      "Vegetarian",
+      "Carbon Footprint Low"
+    ],
+    {
+      "serving_size": "14",
+      "calories": "28",
+      "total_fat": "0",
+      "saturated_fat": "0",
+      "cholesterol": "0",
+      "sodium": "128",
+      "total_carbohydrate": "3",
+      "dietary_fiber": "0",
+      "sugars": "3",
+      "protein": "0",
+      "vitamin_a": "0",
+      "vitamin_c": "0",
+      "calcium": "0",
+      "iron": "0"
+    }
+  ],
+  [
+    "Sauces",
+    "BBQ Sauce",
+    [
+      "dinner"
+    ],
+    [],
+    [
+      "Gluten Free",
+      "Nutrient Dense Medium High",
+      "Vegan",
+      "Carbon Footprint Low"
+    ],
+    {
+      "serving_size": "28",
+      "calories": "55",
+      "total_fat": "0",
+      "saturated_fat": "0",
+      "cholesterol": "0",
+      "sodium": "228",
+      "total_carbohydrate": "14",
+      "dietary_fiber": "0",
+      "sugars": "13",
+      "protein": "0",
+      "vitamin_a": "",
+      "vitamin_c": "",
+      "calcium": "0",
+      "iron": "0"
+    }
+  ],
+  [
+    "Sauces",
+    "Honey Hot Sauce",
+    [
+      "dinner"
+    ],
+    [],
+    [
+      "Gluten Free",
+      "Nutrient Dense High",
+      "Vegetarian",
+      "Carbon Footprint Low"
+    ],
+    {
+      "serving_size": "26",
+      "calories": "65",
+      "total_fat": "0",
+      "saturated_fat": "0",
+      "cholesterol": "0",
+      "sodium": "109",
+      "total_carbohydrate": "19",
+      "dietary_fiber": "0",
+      "sugars": "19",
+      "protein": "0",
+      "vitamin_a": "0",
+      "vitamin_c": "0",
+      "calcium": "0",
+      "iron": "0"
+    }
+  ],
+  [
+    "Sauces",
+    "Ranch Dressing",
+    [
+      "dinner"
+    ],
+    [
+      "eggs",
+      "milk",
+      "soy"
+    ],
+    [
+      "Gluten Free",
+      "Nutrient Dense Medium",
+      "Vegetarian",
+      "Carbon Footprint Low"
+    ],
+    {
+      "serving_size": "28",
+      "calories": "101",
+      "total_fat": "11",
+      "saturated_fat": "2",
+      "cholesterol": "6",
+      "sodium": "247",
+      "total_carbohydrate": "1",
+      "dietary_fiber": "0",
+      "sugars": "1",
+      "protein": "1",
+      "vitamin_a": "0",
+      "vitamin_c": "0",
+      "calcium": "2",
+      "iron": "0"
+    }
+  ],
+  [
+    "Soup",
+    "Shrimp & Corn Soup",
+    [
+      "dinner"
+    ],
+    [
+      "shellfish"
+    ],
+    [
+      "Halal",
+      "Nutrient Dense Low",
+      "Carbon Footprint Medium"
+    ],
+    {
+      "serving_size": "261",
+      "calories": "88",
+      "total_fat": "2",
+      "saturated_fat": "0",
+      "cholesterol": "22",
+      "sodium": "510",
+      "total_carbohydrate": "13",
+      "dietary_fiber": "2",
+      "sugars": "5",
+      "protein": "4",
+      "vitamin_a": "11",
+      "vitamin_c": "34",
+      "calcium": "2",
+      "iron": "3"
+    }
+  ],
+  [
+    "Signature Maize",
+    "Homestyle Chicken Tenders",
+    [
+      "dinner"
+    ],
+    [
+      "eggs",
+      "item is deep fried",
+      "milk",
+      "soy",
+      "wheat/barley/rye"
+    ],
+    [
+      "Nutrient Dense Low Medium",
+      "Carbon Footprint Medium"
+    ],
+    {
+      "serving_size": "85",
+      "calories": "289",
+      "total_fat": "19",
+      "saturated_fat": "4",
+      "cholesterol": "0",
+      "sodium": "509",
+      "total_carbohydrate": "13",
+      "dietary_fiber": "1",
+      "sugars": "0",
+      "protein": "16",
+      "vitamin_a": "0",
+      "vitamin_c": "0",
+      "calcium": "2",
+      "iron": "4"
+    }
+  ],
+  [
+    "Signature Maize",
+    "Criss Cross Fries",
+    [
+      "dinner"
     ],
     [
       "item is deep fried"
@@ -197,58 +905,242 @@
     ],
     {
       "serving_size": "113",
-      "calories": "209",
-      "total_fat": "15",
-      "saturated_fat": "3",
+      "calories": "283",
+      "total_fat": "20",
+      "saturated_fat": "4",
       "cholesterol": "0",
-      "sodium": "506",
-      "total_carbohydrate": "22",
-      "dietary_fiber": "2",
-      "sugars": "0",
-      "protein": "2",
+      "sodium": "27",
+      "total_carbohydrate": "23",
+      "dietary_fiber": "1",
+      "sugars": "1",
+      "protein": "1",
       "vitamin_a": "0",
       "vitamin_c": "0",
-      "calcium": "2",
+      "calcium": "1",
       "iron": "2"
     }
   ],
   [
-    "Strawberry Banana Crumble w/Coconut",
+    "24 Carrots",
+    "Guacamole",
     [
-      "brunch"
+      "dinner"
     ],
+    [],
     [
-      "oats",
-      "soy",
-      "tree nuts",
-      "wheat/barley/rye"
-    ],
-    [
+      "Gluten Free",
       "Nutrient Dense Medium High",
       "Vegan",
       "Carbon Footprint Low"
     ],
     {
-      "serving_size": "154",
-      "calories": "327",
-      "total_fat": "10",
-      "saturated_fat": "5",
+      "serving_size": "28",
+      "calories": "66",
+      "total_fat": "6",
+      "saturated_fat": "1",
       "cholesterol": "0",
-      "sodium": "119",
-      "total_carbohydrate": "60",
-      "dietary_fiber": "4",
-      "sugars": "39",
-      "protein": "3",
-      "vitamin_a": "1",
-      "vitamin_c": "35",
-      "calcium": "1",
+      "sodium": "113",
+      "total_carbohydrate": "3",
+      "dietary_fiber": "2",
+      "sugars": "0",
+      "protein": "1",
+      "vitamin_a": "",
+      "vitamin_c": "",
+      "calcium": "0",
+      "iron": "0"
+    }
+  ],
+  [
+    "24 Carrots",
+    "Mild Salsa",
+    [
+      "dinner"
+    ],
+    [],
+    [
+      "Gluten Free",
+      "Nutrient Dense Medium High",
+      "Vegan",
+      "Carbon Footprint Low"
+    ],
+    {
+      "serving_size": "28",
+      "calories": "9",
+      "total_fat": "0",
+      "saturated_fat": "0",
+      "Cholesterol": "",
+      "sodium": "191",
+      "total_carbohydrate": "2",
+      "dietary_fiber": "",
+      "sugars": "1",
+      "protein": "0",
+      "vitamin_a": "",
+      "vitamin_c": "",
+      "calcium": "",
+      "iron": ""
+    }
+  ],
+  [
+    "24 Carrots",
+    "Yellow Rice",
+    [
+      "dinner"
+    ],
+    [],
+    [
+      "Gluten Free",
+      "Nutrient Dense Low",
+      "Vegan",
+      "Carbon Footprint Low"
+    ],
+    {
+      "serving_size": "113",
+      "calories": "192",
+      "total_fat": "3",
+      "saturated_fat": "0",
+      "cholesterol": "0",
+      "sodium": "411",
+      "total_carbohydrate": "37",
+      "dietary_fiber": "0",
+      "sugars": "2",
+      "protein": "4",
+      "vitamin_a": "0",
+      "vitamin_c": "2",
+      "calcium": "0",
       "iron": "7"
     }
   ],
   [
-    "Sugar Cookies",
+    "24 Carrots",
+    "Spicy Black Beans",
     [
-      "brunch"
+      "dinner"
+    ],
+    [],
+    [
+      "Gluten Free",
+      "Nutrient Dense High",
+      "Spicy",
+      "Vegan",
+      "Carbon Footprint Low"
+    ],
+    {
+      "serving_size": "85",
+      "calories": "75",
+      "total_fat": "0",
+      "saturated_fat": "0",
+      "cholesterol": "0",
+      "sodium": "65",
+      "total_carbohydrate": "14",
+      "dietary_fiber": "5",
+      "sugars": "2",
+      "protein": "4",
+      "vitamin_a": "1",
+      "vitamin_c": "22",
+      "calcium": "4",
+      "iron": "9"
+    }
+  ],
+  [
+    "Halal",
+    "Sauteed Mixed Peppers & Onions",
+    [
+      "dinner"
+    ],
+    [],
+    [
+      "Gluten Free",
+      "Nutrient Dense Medium",
+      "Vegan",
+      "Carbon Footprint Low"
+    ],
+    {
+      "serving_size": "28",
+      "calories": "12",
+      "total_fat": "0",
+      "saturated_fat": "0",
+      "cholesterol": "0",
+      "sodium": "1",
+      "total_carbohydrate": "2",
+      "dietary_fiber": "1",
+      "sugars": "1",
+      "protein": "0",
+      "vitamin_a": "4",
+      "vitamin_c": "20",
+      "calcium": "0",
+      "iron": "0"
+    }
+  ],
+  [
+    "Halal",
+    "Halal Fajita-Spiced Beef",
+    [
+      "dinner"
+    ],
+    [
+      "beef"
+    ],
+    [
+      "Gluten Free",
+      "Halal",
+      "Nutrient Dense High",
+      "Carbon Footprint High"
+    ],
+    {
+      "serving_size": "51",
+      "calories": "116",
+      "total_fat": "4",
+      "saturated_fat": "2",
+      "cholesterol": "40",
+      "sodium": "189",
+      "total_carbohydrate": "3",
+      "dietary_fiber": "1",
+      "sugars": "2",
+      "protein": "14",
+      "vitamin_a": "5",
+      "vitamin_c": "37",
+      "calcium": "1",
+      "iron": "25"
+    }
+  ],
+  [
+    "MBakery",
+    "Vegan Raspberry Hazelnut Linzer Cookies",
+    [
+      "dinner"
+    ],
+    [
+      "soy",
+      "tree nuts",
+      "wheat/barley/rye"
+    ],
+    [
+      "Nutrient Dense Low Medium",
+      "Vegan",
+      "Carbon Footprint Low"
+    ],
+    {
+      "serving_size": "41",
+      "calories": "163",
+      "total_fat": "9",
+      "saturated_fat": "3",
+      "cholesterol": "0",
+      "sodium": "146",
+      "total_carbohydrate": "19",
+      "dietary_fiber": "2",
+      "sugars": "10",
+      "protein": "1",
+      "vitamin_a": "0",
+      "vitamin_c": "0",
+      "calcium": "4",
+      "iron": "3"
+    }
+  ],
+  [
+    "MBakery",
+    "Apricot Crumble Bars",
+    [
+      "dinner"
     ],
     [
       "eggs",
@@ -261,119 +1153,89 @@
       "Carbon Footprint Low"
     ],
     {
-      "serving_size": "35",
-      "calories": "162",
-      "total_fat": "8",
-      "saturated_fat": "3",
-      "cholesterol": "10",
-      "sodium": "137",
-      "total_carbohydrate": "19",
-      "dietary_fiber": "0",
-      "sugars": "10",
-      "protein": "2",
-      "vitamin_a": "6",
+      "serving_size": "67",
+      "calories": "265",
+      "total_fat": "12",
+      "saturated_fat": "8",
+      "cholesterol": "49",
+      "sodium": "37",
+      "total_carbohydrate": "37",
+      "dietary_fiber": "1",
+      "sugars": "16",
+      "protein": "3",
+      "vitamin_a": "10",
       "vitamin_c": "0",
       "calcium": "1",
-      "iron": "3"
+      "iron": "5"
     }
   ],
   [
-    "Chocolate Chocolate Chip Muffins",
+    "MBakery",
+    "Espresso Brownie",
     [
-      "brunch"
+      "dinner"
     ],
     [
       "eggs",
       "milk",
       "soy",
-      "wheat/barley/rye"
-    ],
-    [
-      "Nutrient Dense Low Medium",
-      "Vegetarian",
-      "Carbon Footprint Low"
-    ],
-    {
-      "serving_size": "54",
-      "calories": "176",
-      "total_fat": "8",
-      "saturated_fat": "2",
-      "cholesterol": "17",
-      "sodium": "172",
-      "total_carbohydrate": "24",
-      "dietary_fiber": "1",
-      "sugars": "15",
-      "protein": "2",
-      "vitamin_a": "0",
-      "vitamin_c": "0",
-      "calcium": "0",
-      "iron": "5"
-    }
-  ],
-  [
-    "White Chocolate Raspberry Bread",
-    [
-      "brunch"
-    ],
-    [
-      "eggs",
-      "milk",
-      "soy",
-      "wheat/barley/rye"
-    ],
-    [
-      "Nutrient Dense Low Medium",
-      "Vegetarian",
-      "Carbon Footprint Low"
-    ],
-    {
-      "serving_size": "61",
-      "calories": "198",
-      "total_fat": "8",
-      "saturated_fat": "2",
-      "cholesterol": "19",
-      "sodium": "160",
-      "total_carbohydrate": "30",
-      "dietary_fiber": "1",
-      "sugars": "17",
-      "protein": "3",
-      "vitamin_a": "0",
-      "vitamin_c": "1",
-      "calcium": "5",
-      "iron": "5"
-    }
-  ],
-  [
-    "Assorted Mini Danishes with Nuts",
-    [
-      "brunch"
-    ],
-    [
-      "eggs",
-      "milk",
       "tree nuts",
       "wheat/barley/rye"
     ],
     [
-      "Nutrient Dense Low Medium",
+      "Nutrient Dense Low",
+      "Vegetarian",
+      "Carbon Footprint Medium"
+    ],
+    {
+      "serving_size": "89",
+      "calories": "293",
+      "total_fat": "18",
+      "saturated_fat": "11",
+      "cholesterol": "95",
+      "sodium": "189",
+      "total_carbohydrate": "31",
+      "dietary_fiber": "1",
+      "sugars": "24",
+      "protein": "6",
+      "vitamin_a": "3",
+      "vitamin_c": "0",
+      "calcium": "6",
+      "iron": "5"
+    }
+  ],
+  [
+    "MBakery",
+    "Chocolate Chunk Cookies",
+    [
+      "dinner"
+    ],
+    [
+      "eggs",
+      "milk",
+      "soy",
+      "wheat/barley/rye"
+    ],
+    [
+      "Nutrient Dense Low",
       "Vegetarian",
       "Carbon Footprint Low"
     ],
     {
-      "serving_size": "43",
-      "calories": "132",
+      "serving_size": "35",
+      "calories": "152",
       "total_fat": "7",
       "saturated_fat": "3",
-      "cholesterol": "10",
-      "sodium": "46",
-      "total_carbohydrate": "15",
+      "cholesterol": "5",
+      "sodium": "117",
+      "total_carbohydrate": "21",
       "dietary_fiber": "1",
-      "sugars": "4",
+      "sugars": "13",
       "protein": "2",
-      "vitamin_a": "0",
+      "vitamin_a": "4",
       "vitamin_c": "0",
-      "calcium": "3",
-      "iron": "15"
+      "calcium": "1",
+      "iron": "6"
     }
   ]
 ]
