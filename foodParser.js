@@ -36,6 +36,7 @@ async function pushToSupabase(foodItem, diningHall) {
     let allergens = foodItem.allergens;
     let traits = foodItem.traits;
     let nutrition_facts = foodItem.nutrition_facts;
+    let subheader = foodItem.subHeader;
     let is_breakfast = false;
     let is_lunch = false;
     let is_dinner = false;
@@ -56,10 +57,9 @@ async function pushToSupabase(foodItem, diningHall) {
             is_brunch = true;
         }
     }
-
     
     try {
-        const { data, error } = await supabase.from(diningHall).upsert({ name, meal_time, allergens, traits, nutrition_facts, is_breakfast, is_lunch, is_dinner, is_brunch });
+        const { data, error } = await supabase.from(diningHall).upsert({ name, meal_time, allergens, traits, nutrition_facts, is_breakfast, is_lunch, is_dinner, is_brunch, subheader });
         if (error) {
             console.error("Error", error.message);
         } else {
@@ -110,7 +110,7 @@ async function parseHTMLFilesInFolder(folderPath) {
 
         let diningHallFoods = new Map();
         let jsonArray = [];
-
+        
         $('h3 > a').each((index, element) => {
             const mealTime = $(element).text().trim().toLowerCase();
             $(element).parent().next().find('li').each((foodIndex, foodElement) => {
@@ -119,121 +119,155 @@ async function parseHTMLFilesInFolder(folderPath) {
         });        
         
         const pushToDiningHallFoods = () => {
-            for (const element of $('ul.items > li')) {
-                let foodItem = {}
-                foodItem.food_name = $(element).find('.item-name').text().trim();
+            // Select each 'li' that directly contains a 'ul.items' list
+            $('ul.courses_wrapper > li:has(ul.items)').each(function(index, element) {
+                // Find the 'h4' element within the current 'li'
+                const headerText = $(element).find('h4').first().text().trim().toLowerCase();
+                // Now find each 'li' within the 'ul.items' of the current category element and process the food items
+                $(element).find('ul.items > li').each(function(itemIndex, foodElement) {
+                    
+                    let foodItem = {}
 
-                let meal_time = [$(element).data('meal-time')]
-                foodItem.meal_time = meal_time
+                    // Split the header text into words
+                    const words = headerText.split(' ');
 
-                foodItem.allergens = $(element).find('.allergens ul li').map((idx, allergen) => $(allergen).text().trim()).get()
-                foodItem.traits = $(element).find('.traits li').map((idx, trait) => $(trait).text().trim()).get()
-                
-                let nutritionFacts = {};
-                $(element).find('.nutrition-facts tbody tr').each((idx, tr) => {
-                    let label = $(tr).find('td').first().text().trim().replace(':', '').replace(/(\r\n|\n|\r)/gm, "").trim();
-                    let value = $(tr).find('td').last().text().trim().replace(/(\r\n|\n|\r)/gm, "").trim();
-
-                    const subLabel = label.substring(0, label.indexOf(" "));
-                    if (subLabel === 'Serving') {
-                        const startIndex = label.indexOf('Size') + 'Size'.length;
-                        const subString = label.substring(startIndex).trim();
-
-                        let adjust = subString.match(/\((.*?)\)/); // Match content within parentheses
-                        if (adjust && adjust.length > 1) { // Check if there's a match and captured group
-                            adjust = adjust[1]; // Access captured group
-                            adjust = adjust.replace(/[^\d.]/g, ''); // Remove non-digit characters
-                            nutritionFacts['serving_size'] = adjust;
+                    // Capitalize the first letter of each word
+                    const capitalizedWords = words.map(word => {
+                        // Check if the word is "Mbakery"
+                        if (word === "mbakery") {
+                            // Capitalize the first letter and the second letter
+                            return word.charAt(0).toUpperCase() + word.charAt(1).toUpperCase() + word.slice(2);
+                        } else {
+                            // Capitalize only the first letter
+                            return word.charAt(0).toUpperCase() + word.slice(1);
                         }
-                    } 
+                    });
+
+                    // Join the words back together with a space between them
+                    const capitalizedHeaderText = capitalizedWords.join(' ');
+
+                    // Assign capitalizedHeaderText to foodItem.subHeader
+                    foodItem.subHeader = capitalizedHeaderText;
+
+                    foodItem.food_name = $(foodElement).find('.item-name').text().trim();
+
+                    let meal_time = [$(foodElement).data('meal-time')]
+                    foodItem.meal_time = meal_time
+
+                    foodItem.allergens = $(foodElement).find('.allergens ul li').map((idx, allergen) => $(allergen).text().trim()).get()
+                    foodItem.traits = $(foodElement).find('.traits li').map((idx, trait) => $(trait).text().trim()).get()
                     
-                    else if (subLabel === 'Calories') {
-                        const startIndex = label.indexOf('Calories') + 'Calories'.length;
-                        const subString = label.substring(startIndex).trim();
-                        nutritionFacts['calories'] = subString.replace(/[^\d.]/g, '');
-                    } 
-                    
-                    else if (subLabel === 'Sugars') {
-                        const startIndex = label.indexOf('Sugars') + 'Sugars'.length;
-                        const subString = label.substring(startIndex).trim();
-                        nutritionFacts['sugars'] = subString.replace(/[^\d.]/g, '');
-                    } 
-                    
-                    else if (subLabel === 'Protein') {
-                        const startIndex = label.indexOf('Protein') + 'Protein'.length;
-                        const subString = label.substring(startIndex).trim();
-                        nutritionFacts['protein'] = subString.replace(/[^\d.]/g, '');
-                    } 
-                    
-                    else if (subLabel === 'Sodium') {
-                        const startIndex = label.indexOf('Sodium') + 'Sodium'.length;
-                        const subString = label.substring(startIndex).trim();
-                        nutritionFacts['sodium'] = subString.replace(/[^\d.]/g, '');
-                    } 
-                    
-                    else if (subLabel === 'Cholesterol') {
-                        const startIndex = label.indexOf('Cholesterol') + 'Cholesterol'.length;
-                        const subString = label.substring(startIndex).trim();
-                        nutritionFacts['cholesterol'] = subString.replace(/[^\d.]/g, '');
-                    } 
-                    
-                    else if (subLabel === 'Total') { 
-                        if (label.includes('Total Fat')) {
-                            const startIndex = label.indexOf('Total Fat') + 'Total Fat'.length;
+                    let nutritionFacts = {};
+
+                    $(foodElement).find('.nutrition-facts tbody tr').each((idx, tr) => {
+                        let label = $(tr).find('td').first().text().trim().replace(':', '').replace(/(\r\n|\n|\r)/gm, "").trim();
+                        let value = $(tr).find('td').last().text().trim().replace(/(\r\n|\n|\r)/gm, "").trim();
+
+                        const subLabel = label.substring(0, label.indexOf(" "));
+                        if (subLabel === 'Serving') {
+                            const startIndex = label.indexOf('Size') + 'Size'.length;
                             const subString = label.substring(startIndex).trim();
-                            nutritionFacts['total_fat'] = subString.replace(/[^\d.]/g, '');
-                        } else if (label.includes('Total Carbohydrate')) {
-                            const startIndex = label.indexOf('Total Carbohydrate') + 'Total Carbohydrate'.length;
+
+                            let adjust = subString.match(/\((.*?)\)/); // Match content within parentheses
+                            if (adjust && adjust.length > 1) { // Check if there's a match and captured group
+                                adjust = adjust[1]; // Access captured group
+                                adjust = adjust.replace(/[^\d.]/g, ''); // Remove non-digit characters
+                                nutritionFacts['serving_size'] = adjust;
+                            }
+                        } 
+                        
+                        else if (subLabel === 'Calories') {
+                            const startIndex = label.indexOf('Calories') + 'Calories'.length;
                             const subString = label.substring(startIndex).trim();
-                            nutritionFacts['total_carbohydrate'] = subString.replace(/[^\d.]/g, '');
+                            nutritionFacts['calories'] = subString.replace(/[^\d.]/g, '');
+                        } 
+                        
+                        else if (subLabel === 'Sugars') {
+                            const startIndex = label.indexOf('Sugars') + 'Sugars'.length;
+                            const subString = label.substring(startIndex).trim();
+                            nutritionFacts['sugars'] = subString.replace(/[^\d.]/g, '');
+                        } 
+                        
+                        else if (subLabel === 'Protein') {
+                            const startIndex = label.indexOf('Protein') + 'Protein'.length;
+                            const subString = label.substring(startIndex).trim();
+                            nutritionFacts['protein'] = subString.replace(/[^\d.]/g, '');
+                        } 
+                        
+                        else if (subLabel === 'Sodium') {
+                            const startIndex = label.indexOf('Sodium') + 'Sodium'.length;
+                            const subString = label.substring(startIndex).trim();
+                            nutritionFacts['sodium'] = subString.replace(/[^\d.]/g, '');
+                        } 
+                        
+                        else if (subLabel === 'Cholesterol') {
+                            const startIndex = label.indexOf('Cholesterol') + 'Cholesterol'.length;
+                            const subString = label.substring(startIndex).trim();
+                            nutritionFacts['cholesterol'] = subString.replace(/[^\d.]/g, '');
+                        } 
+                        
+                        else if (subLabel === 'Total') { 
+                            if (label.includes('Total Fat')) {
+                                const startIndex = label.indexOf('Total Fat') + 'Total Fat'.length;
+                                const subString = label.substring(startIndex).trim();
+                                nutritionFacts['total_fat'] = subString.replace(/[^\d.]/g, '');
+                            } else if (label.includes('Total Carbohydrate')) {
+                                const startIndex = label.indexOf('Total Carbohydrate') + 'Total Carbohydrate'.length;
+                                const subString = label.substring(startIndex).trim();
+                                nutritionFacts['total_carbohydrate'] = subString.replace(/[^\d.]/g, '');
+                            }
+                        } 
+                        
+                        else if (subLabel === 'Saturated') { // 
+                            const startIndex = label.indexOf('Saturated Fat') + 'Saturated Fat'.length;
+                            const subString = label.substring(startIndex).trim();
+                            nutritionFacts['saturated_fat'] = subString.replace(/[^\d.]/g, '');
+                        } 
+                        
+                        else if (subLabel === 'Dietary') { //
+                            const startIndex = label.indexOf('Dietary Fiber') + 'Dietary Fiber'.length;
+                            const subString = label.substring(startIndex).trim();
+                            nutritionFacts['dietary_fiber'] = subString.replace(/[^\d.]/g, '');
+                        } 
+
+                        else if (label === 'Iron') {
+                            nutritionFacts['iron'] = value.replace(/[^\d.]/g, '');
                         }
-                    } 
-                    
-                    else if (subLabel === 'Saturated') { // 
-                        const startIndex = label.indexOf('Saturated Fat') + 'Saturated Fat'.length;
-                        const subString = label.substring(startIndex).trim();
-                        nutritionFacts['saturated_fat'] = subString.replace(/[^\d.]/g, '');
-                    } 
-                    
-                    else if (subLabel === 'Dietary') { //
-                        const startIndex = label.indexOf('Dietary Fiber') + 'Dietary Fiber'.length;
-                        const subString = label.substring(startIndex).trim();
-                        nutritionFacts['dietary_fiber'] = subString.replace(/[^\d.]/g, '');
-                    } 
 
-                    else if (label === 'Iron') {
-                        nutritionFacts['iron'] = value.replace(/[^\d.]/g, '');
-                    }
-
-                    else if (label === 'Calcium') {
-                        nutritionFacts['calcium'] = value.replace(/[^\d.]/g, '');
-                    }
-
-                    else if (subLabel === 'Vitamin') { 
-                        if (label.includes('Vitamin A')) {
-                            nutritionFacts['vitamin_a'] = value.replace(/[^\d.]/g, '');
-                        } else if (label.includes('Vitamin C')) {
-                            nutritionFacts['vitamin_c'] = value.replace(/[^\d.]/g, '');
+                        else if (label === 'Calcium') {
+                            nutritionFacts['calcium'] = value.replace(/[^\d.]/g, '');
                         }
-                    } 
-                    
-                    else if (label && value && label != 'Amount Per Serving') {
-                        nutritionFacts[label] = value.replace(/[^\d.]/g, '');
+
+                        else if (subLabel === 'Vitamin') { 
+                            if (label.includes('Vitamin A')) {
+                                nutritionFacts['vitamin_a'] = value.replace(/[^\d.]/g, '');
+                            } else if (label.includes('Vitamin C')) {
+                                nutritionFacts['vitamin_c'] = value.replace(/[^\d.]/g, '');
+                            }
+                        } 
+                        
+                        else if (label && value && label != 'Amount Per Serving') {
+                            nutritionFacts[label] = value.replace(/[^\d.]/g, '');
+                        }
+                    });
+                    foodItem.nutrition_facts = nutritionFacts;
+
+                    if(diningHallFoods.get(foodItem.food_name)){
+                        if(!diningHallFoods.get(foodItem.food_name).meal_time.includes($(foodElement).data('meal-time'))){
+                            diningHallFoods.get(foodItem.food_name).meal_time.push($(foodElement).data('meal-time'));
+                        }
+                    }
+                    else{
+                        if (foodItem.nutrition_facts && Object.keys(foodItem.nutrition_facts).length > 0) {
+                            diningHallFoods.set(foodItem.food_name, foodItem);
+                        }
+                    }
+                    if (foodItem.nutrition_facts && Object.keys(foodItem.nutrition_facts).length > 0) {
+                        jsonArray.push([foodItem.subHeader, foodItem.food_name, foodItem.meal_time, foodItem.allergens, foodItem.traits, foodItem.nutrition_facts]);
                     }
                 });
-                foodItem.nutrition_facts = nutritionFacts;
-
-                if(diningHallFoods.get(foodItem.food_name)){
-                    if(!diningHallFoods.get(foodItem.food_name).meal_time.includes($(element).data('meal-time'))){
-                        diningHallFoods.get(foodItem.food_name).meal_time.push($(element).data('meal-time'));
-                    }
-                }
-                else{
-                    diningHallFoods.set(foodItem.food_name, foodItem);
-                }
-                jsonArray.push([foodItem.food_name, foodItem.meal_time, foodItem.allergens, foodItem.traits, foodItem.nutrition_facts]);
-            };
-            // Save the JSON file after processing each HTML file
+            }); 
+            //Save the JSON file after processing each HTML file
             fs.writeFileSync(diningHallFilePath, JSON.stringify(jsonArray, null, 2), 'utf8');
         }
         pushToDiningHallFoods();
